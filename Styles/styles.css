@@ -1,5 +1,6 @@
-body {
+* {
   margin: 0;
+  overflow-x: hidden;
 }
 
 h1,
@@ -44,6 +45,7 @@ li {
   background-size: cover;
   background-repeat: no-repeat;
   height: 800px;
+  padding-top: 50px;
 }
 
 .header .header__logo {
@@ -67,12 +69,18 @@ li {
 }
 
 .header .header__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding-top: 90px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .header .header__text h1 {
   font-size: 3.2rem;
-  margin: auto;
   text-align: center;
   letter-spacing: 0.2em;
   color: white;
@@ -153,7 +161,8 @@ li {
   font-size: 1rem;
 }
 
-.section1 .section1__text {
+.section1 .section1__text1,
+.section1 .section1__text2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -171,7 +180,10 @@ li {
           align-items: center;
 }
 
-.section1 .section1__text button {
+.section1 .section1__text1 .section1__button1,
+.section1 .section1__text1 .section1__button2,
+.section1 .section1__text2 .section1__button1,
+.section1 .section1__text2 .section1__button2 {
   left: 100px;
   font-family: "Fraunces", serif;
   font-size: 14px;
@@ -180,6 +192,12 @@ li {
   -webkit-text-decoration: underline 5px solid #fad400;
           text-decoration: underline 5px solid #fad400;
   cursor: pointer;
+}
+
+.section1 .section1__text1 .section1__button2,
+.section1 .section1__text2 .section1__button2 {
+  -webkit-text-decoration: underline 5px solid #fe7162;
+          text-decoration: underline 5px solid #fe7162;
 }
 
 .section1 .section1__image1 {
@@ -296,7 +314,7 @@ li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 100px;
+  padding: 100px 0;
 }
 
 .section2 .section2__header h1 {
@@ -308,10 +326,9 @@ li {
 }
 
 .section2 .section2__users {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   justify-items: center;
   text-align: center;
 }
@@ -320,12 +337,12 @@ li {
 .section2 .section2__users .thomas,
 .section2 .section2__users .jennie {
   border-radius: 50%;
-  width: 17%;
+  width: 15%;
   margin: 0 auto;
 }
 
 .section2 .section2__users p {
-  margin: 40px auto;
+  margin: 35px auto;
   color: #818498;
 }
 
@@ -399,5 +416,97 @@ li {
 
 .footer .footer__media .media__icons {
   margin: 0 15px;
+}
+
+@media (max-device-width: 700px) {
+  .arrow {
+    position: absolute;
+    bottom: 40%;
+  }
+  .section1 {
+        grid-template-areas: "image1" "text" "image2" "text2" "box1" "box2";
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    text-align: center;
+  }
+  .section1 .section1__text1 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: text;
+    height: 400px;
+  }
+  .section1 .section1__text1 p {
+    margin: 20px 0;
+  }
+  .section1 .section1__text2 {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    grid-area: text2;
+    height: 400px;
+  }
+  .section1 .section1__text2 p {
+    margin: 20px 0;
+  }
+  .section1 .section1__image1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: image1;
+    height: 400px;
+  }
+  .section1 .section1__image2 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: image2;
+    height: 400px;
+  }
+  .section1 .section1__box1 {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    grid-area: box1;
+    height: 700px;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .section1 .section1__box1 .box1__text {
+    width: 2000px;
+  }
+  .section1 .section1__box2 {
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
+    grid-area: box2;
+    height: 700px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .section1 .section1__box2 .box2__text {
+    width: 2000px;
+  }
+  .section1 .section1__text h1,
+  .section1 .box1__text h1,
+  .section1 .box2__text h1 {
+    font-size: 40px;
+  }
+  .section1 .section1__text p,
+  .section1 .box1__text p,
+  .section1 .box2__text p {
+    margin: 20px 0;
+    font-size: 20px;
+  }
+  .section2__users {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .section2__users .users__thomas {
+    margin: 65px 0;
+  }
+  .section3 {
+    -ms-grid-columns: (2fr)[2];
+        grid-template-columns: repeat(2, 2fr);
+  }
 }
 /*# sourceMappingURL=styles.css.map */
