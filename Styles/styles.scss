@@ -1,6 +1,8 @@
-body {
+* {
   margin: 0;
+  overflow-x: hidden;
 }
+
 h1,
 h2 {
   font-family: "Fraunces", serif;
@@ -44,6 +46,7 @@ li {
   background-size: cover;
   background-repeat: no-repeat;
   height: 800px;
+  padding-top: 50px;
 
   .header__logo {
     display: flex;
@@ -60,11 +63,13 @@ li {
   }
 
   .header__text {
+    display: flex;
+    flex-wrap: wrap;
     padding-top: 90px;
+    justify-content: space-around;
 
     h1 {
       font-size: 3.2rem;
-      margin: auto;
       text-align: center;
       letter-spacing: 0.2em;
       color: hsl(0, 0%, 100%);
@@ -137,14 +142,16 @@ li {
     font-size: 1rem;
   }
 
-  .section1__text {
+  .section1__text1,
+  .section1__text2 {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    button {
+    .section1__button1,
+    .section1__button2 {
       left: 100px;
       font-family: "Fraunces", serif;
       font-size: 14px;
@@ -152,6 +159,10 @@ li {
       border: none;
       text-decoration: underline 5px solid hsl(51, 100%, 49%);
       cursor: pointer;
+    }
+
+    .section1__button2 {
+      text-decoration: underline 5px solid hsl(6, 99%, 69%);
     }
   }
 
@@ -235,7 +246,7 @@ li {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  padding: 100px;
+  padding: 100px 0;
 
   .section2__header {
     h1 {
@@ -248,8 +259,7 @@ li {
   }
 
   .section2__users {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
     justify-items: center;
     text-align: center;
 
@@ -257,12 +267,12 @@ li {
     .thomas,
     .jennie {
       border-radius: 50%;
-      width: 17%;
+      width: 15%;
       margin: 0 auto;
     }
 
     p {
-      margin: 40px auto;
+      margin: 35px auto;
       color: hsl(232, 10%, 55%);
     }
 
@@ -336,5 +346,95 @@ li {
     .media__icons {
       margin: 0 15px;
     }
+  }
+}
+
+@media (max-device-width: 700px) {
+  .arrow {
+    position: absolute;
+    bottom: 40%;
+  }
+  .section1 {
+    grid-template-areas:
+      "image1"
+      "text"
+      "image2"
+      "text2"
+      "box1"
+      "box2";
+    grid-template-columns: 1fr;
+    align-items: stretch;
+    text-align: center;
+
+    .section1__text1 {
+      grid-area: text;
+      height: 400px;
+      p {
+        margin: 20px 0;
+      }
+    }
+
+    .section1__text2 {
+      grid-area: text2;
+      height: 400px;
+      p {
+        margin: 20px 0;
+      }
+    }
+
+    .section1__image1 {
+      grid-area: image1;
+      height: 400px;
+    }
+
+    .section1__image2 {
+      grid-area: image2;
+      height: 400px;
+    }
+
+    .section1__box1 {
+      grid-area: box1;
+      height: 700px;
+      justify-content: space-around;
+
+      .box1__text {
+        width: 2000px;
+      }
+    }
+
+    .section1__box2 {
+      grid-area: box2;
+      height: 700px;
+      flex-wrap: wrap;
+
+      .box2__text {
+        width: 2000px;
+      }
+    }
+
+    .section1__text,
+    .box1__text,
+    .box2__text {
+      h1 {
+        font-size: 40px;
+      }
+
+      p {
+        margin: 20px 0;
+        font-size: 20px;
+      }
+    }
+  }
+
+  .section2__users {
+    flex-direction: column;
+
+    .users__thomas {
+      margin: 65px 0;
+    }
+  }
+
+  .section3 {
+    grid-template-columns: repeat(2, 2fr);
   }
 }
