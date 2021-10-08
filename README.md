@@ -1,6 +1,6 @@
 # Frontend Mentor - Sunnyside agency landing page
 
-This is a solution to the [Testimonials grid section challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/sunnyside-agency-landing-page-7yVs3B6ef).
+This is a solution to the [Sunnyside Landing Page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/sunnyside-agency-landing-page-7yVs3B6ef).
 
 Users should be able to:
 
@@ -17,5 +17,6 @@ Users should be able to:
 # Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
-- CSS Grid
+- SASS
+- CSS Grid and CSS Flex Box
+- Vanilla Java Script
