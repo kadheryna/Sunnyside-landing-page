@@ -7,30 +7,28 @@ h1,
 h2 {
   font-family: "Fraunces", serif;
   color: #23303e;
-  width: 70%;
 }
 
 h3 {
   font-family: "Barlow", sans-serif;
   color: #a7abae;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 16px;
 }
 
 h4 {
   font-family: "Barlow", sans-serif;
   font-weight: 900;
-  font-size: 1.1rem;
+  font-size: 18px;
   color: #458c7e;
 }
 
 p {
   font-family: "Barlow", sans-serif;
   font-weight: 500;
-  font-size: 1.1rem;
+  font-size: 20px;
   line-height: 1.5;
   color: #a7abae;
-  width: 70%;
 }
 
 li {
@@ -45,7 +43,6 @@ li {
   background-size: cover;
   background-repeat: no-repeat;
   height: 800px;
-  padding-top: 50px;
 }
 
 .header .header__logo {
@@ -59,6 +56,7 @@ li {
       -ms-flex-align: center;
           align-items: center;
   padding: 10px;
+  margin-top: 20px;
 }
 
 .header .header__logo .logo {
@@ -67,7 +65,7 @@ li {
 }
 
 .header .header__logo h2 {
-  font-size: 2.1rem;
+  font-size: 30px;
   color: white;
   width: 20%;
   text-align: center;
@@ -90,15 +88,15 @@ li {
 }
 
 .header .header__text h1 {
-  font-size: 3.1rem;
+  font-size: 50px;
   letter-spacing: 0.2em;
   color: white;
 }
 
 .header .arrow {
   position: absolute;
-  left: 49%;
-  bottom: 40%;
+  bottom: 300px;
+  height: 14%;
 }
 
 .header .header__nav {
@@ -161,13 +159,15 @@ li {
 }
 
 .section1 h1 {
-  font-size: 2rem;
+  font-size: 35px;
   margin-bottom: 20px;
+  width: 70%;
 }
 
 .section1 p {
-  font-size: 1rem;
+  font-size: 18px;
   margin: 15px 0 20px;
+  width: 70%;
 }
 
 .section1 .section1__text1,
@@ -261,7 +261,6 @@ li {
           justify-content: flex-end;
   text-align: center;
   margin: 0 auto 50px;
-  width: 70%;
 }
 
 .section1 .section1__box1 .box1__text h1,
@@ -297,8 +296,7 @@ li {
       -ms-flex-pack: end;
           justify-content: flex-end;
   text-align: center;
-  margin: 0 auto 50px;
-  width: 70%;
+  margin: 0 auto 70px;
 }
 
 .section1 .section1__box2 .box2__text h1,
@@ -318,12 +316,12 @@ li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 100px 0;
+  padding: 100px 60px;
 }
 
 .section2 .section2__header h1 {
   width: 100%;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
   text-align: center;
   letter-spacing: 0.4em;
   color: #818498;
@@ -333,7 +331,6 @@ li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  justify-items: center;
   text-align: center;
 }
 
@@ -341,18 +338,17 @@ li {
 .section2 .section2__users .thomas,
 .section2 .section2__users .jennie {
   border-radius: 50%;
-  width: 15%;
+  width: 13%;
   margin: 0 auto;
 }
 
 .section2 .section2__users p {
-  margin: 35px auto 15px;
-  -webkit-margin-collapse: collapse;
+  margin: 35px 30px 15px;
   color: #818498;
 }
 
 .section2 .section2__users h2 {
-  font-size: 1.3rem;
+  font-size: 20px;
   margin: 0 auto 5px;
   text-align: center;
 }
@@ -383,7 +379,7 @@ li {
 }
 
 .footer h2 {
-  font-size: 30px;
+  font-size: 33px;
   color: #458c7e;
   margin: auto auto 30px;
   text-align: center;
@@ -395,7 +391,7 @@ li {
 
 .footer .footer__list ul {
   padding: 0;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .footer .footer__list ul li {
@@ -420,26 +416,39 @@ li {
 
 .footer .footer__media .media__icons {
   margin: 0 15px;
+  width: 25px;
 }
 
+/* MEDIA QUERIES FOR MOBILE */
 @media (max-device-width: 800px) {
+  /* HEADER */
   .header {
-    height: 600px;
+    height: 500px;
   }
   .header .arrow {
-    top: 350px;
+    top: 300px;
   }
   .header .header__nav {
     display: none;
   }
-  .header .hamburger {
-    display: block !important;
-    margin-right: 40px;
+  .header .header__logo {
+    margin: 20px 0 0 10px;
+  }
+  .header .header__logo .logo {
+    margin: 0;
+  }
+  .header .header__logo .hamburger {
+    display: block;
+    margin-right: 20px;
+  }
+  .header .header__text h1 {
+    font-size: 2rem;
   }
   .arrow {
     position: absolute;
     bottom: 40%;
   }
+  /* SECTION1 */
   .section1 {
         grid-template-areas: "image1" "text" "image2" "text2" "box1" "box2";
     -ms-grid-columns: 1fr;
@@ -449,23 +458,23 @@ li {
             align-items: stretch;
     text-align: center;
   }
-  .section1 .section1__text1 {
+  .section1 .section1__text1,
+  .section1 .section1__text2 {
     -ms-grid-row: 2;
     -ms-grid-column: 1;
     grid-area: text;
+    text-align: center;
     height: 400px;
+    margin: 30px 0;
   }
-  .section1 .section1__text1 p {
-    margin: 20px 0;
+  .section1 .section1__text1 p,
+  .section1 .section1__text2 p {
+    margin: 10px 0 20px;
   }
   .section1 .section1__text2 {
     -ms-grid-row: 4;
     -ms-grid-column: 1;
     grid-area: text2;
-    height: 400px;
-  }
-  .section1 .section1__text2 p {
-    margin: 20px 0;
   }
   .section1 .section1__image1 {
     -ms-grid-row: 1;
@@ -483,23 +492,30 @@ li {
     -ms-grid-row: 5;
     -ms-grid-column: 1;
     grid-area: box1;
-    height: 700px;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .section1 .section1__box1 .box1__text {
-    width: 2000px;
+    margin-bottom: 10px;
+  }
+  .section1 .section1__box1 .box1__text h1 {
+    font-size: 2.1rem;
   }
   .section1 .section1__box2 {
     -ms-grid-row: 6;
     -ms-grid-column: 1;
     grid-area: box2;
-    height: 700px;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 500px;
   }
   .section1 .section1__box2 .box2__text {
-    width: 2000px;
+    margin-bottom: 10px;
+  }
+  .section1 .section1__box2 .box2__text h1 {
+    font-size: 2.1rem;
   }
   .section1 .section1__text h1,
   .section1 .box1__text h1,
@@ -512,18 +528,27 @@ li {
     margin: 20px 0;
     font-size: 20px;
   }
-  .section2__users {
+  /* SECTION2 */
+  .section2 .section2__users {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
-  .section2__users .users__thomas {
+  .section2 .section2__users p {
+    margin: 20px 0;
+  }
+  .section2 .section2__users .users__thomas {
     margin: 65px 0;
   }
   .section3 {
     -ms-grid-columns: (2fr)[2];
         grid-template-columns: repeat(2, 2fr);
+    height: 800px;
+    overflow: hidden;
   }
 }
 /*# sourceMappingURL=styles.css.map */
