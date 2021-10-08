@@ -60,7 +60,6 @@ li {
     h2 {
       font-size: 30px;
       color: hsl(0, 0%, 100%);
-      width: 20%;
       text-align: center;
     }
 
@@ -139,6 +138,7 @@ li {
   grid-template-columns: 1fr 1fr;
   align-items: stretch;
   text-align: left;
+  margin-bottom: 70px;
 
   h1 {
     font-size: 35px;
@@ -250,15 +250,12 @@ li {
 /* SECTION 2 */
 
 .section2 {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  padding: 100px 60px;
+  display: grid;
+  grid-template-columns: repeat(3), 1fr;
 
   .section2__header {
     h1 {
-      width: 100%;
-      margin-bottom: 80px;
+      margin: 80px auto;
       text-align: center;
       letter-spacing: 0.4em;
       color: hsl(232, 10%, 55%);
@@ -269,6 +266,12 @@ li {
     display: flex;
     text-align: center;
 
+    .users__emily,
+    .users__thomas,
+    .users__jennie {
+      padding: 30px;
+    }
+
     .emily,
     .thomas,
     .jennie {
@@ -278,7 +281,7 @@ li {
     }
 
     p {
-      margin: 35px 30px 15px;
+      margin: 35px 0 15px;
       color: hsl(232, 10%, 55%);
     }
 
@@ -297,6 +300,7 @@ li {
   display: grid;
   grid-template-columns: repeat(4, auto);
   justify-items: stretch;
+  margin-top: 100px;
 
   .milk,
   .oranges,
@@ -309,24 +313,30 @@ li {
 /* FOOTER  */
 
 .footer {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   justify-items: center;
+  text-align: center;
   background: #95d4c6;
+  justify-content: center;
+
   padding-top: 50px;
 
   h2 {
     font-size: 33px;
     color: hsl(168, 34%, 41%);
-    margin: auto auto 30px;
     text-align: center;
   }
 
   .footer__list {
-    margin: auto 0 20px;
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 0 20px;
 
     ul {
       padding: 0;
-      font-size: 18px;
+      margin: 0;
+      font-size: 16px;
 
       li {
         display: inline;
@@ -347,10 +357,13 @@ li {
   }
 
   .footer__media {
+    display: flex;
+    justify-content: space-around;
     margin: 20px auto 50px;
+
     .media__icons {
       margin: 0 15px;
-      width: 25px;
+      width: 22px;
     }
   }
 }
@@ -479,6 +492,7 @@ li {
   /* SECTION2 */
 
   .section2 {
+    justify-content: center;
     .section2__users {
       flex-direction: column;
       justify-content: center;
@@ -486,16 +500,10 @@ li {
       p {
         margin: 20px 0;
       }
-
-      .users__thomas {
-        margin: 65px 0;
-      }
     }
   }
 
   .section3 {
     grid-template-columns: repeat(2, 2fr);
-    height: 800px;
-    overflow: hidden;
   }
 }
