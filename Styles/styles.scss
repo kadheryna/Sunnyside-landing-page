@@ -6,14 +6,15 @@
 h1,
 h2 {
   font-family: "Fraunces", serif;
-  color: hsl(212, 27%, 19%);
+  color: hsl(211, 66%, 24%);
 }
 
 h3 {
   font-family: "Barlow", sans-serif;
   color: hsl(210, 4%, 67%);
   font-weight: 600;
-  font-size: 16px;
+  font-size: 13px;
+  margin-top: 10px;
 }
 
 h4 {
@@ -26,14 +27,29 @@ h4 {
 p {
   font-family: "Barlow", sans-serif;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1.5;
   color: hsl(210, 4%, 67%);
+  margin-bottom: 20px;
 }
 
 li {
   font-family: "Barlow", sans-serif;
   font-weight: 900;
+}
+
+.section1__button1,
+.section1__button2 {
+  font-family: "Fraunces", serif;
+  font-size: 14px;
+  background-color: transparent;
+  border: none;
+  text-decoration: underline 5px solid hsl(51, 100%, 49%);
+  cursor: pointer;
+}
+
+.section1__button2 {
+  text-decoration: underline 5px solid hsl(6, 99%, 69%);
 }
 
 /* HEADER */
@@ -138,41 +154,17 @@ li {
   grid-template-columns: 1fr 1fr;
   align-items: stretch;
   text-align: left;
-  margin-bottom: 70px;
 
   h1 {
-    font-size: 35px;
+    font-size: 30px;
     margin-bottom: 20px;
-    width: 70%;
-  }
-
-  p {
-    font-size: 18px;
-    margin: 15px 0 20px;
-    width: 70%;
   }
 
   .section1__text1,
   .section1__text2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     text-align: left;
-  }
-
-  .section1__button1,
-  .section1__button2 {
-    font-family: "Fraunces", serif;
-    font-size: 14px;
-    background-color: transparent;
-    border: none;
-    text-decoration: underline 5px solid hsl(51, 100%, 49%);
-    cursor: pointer;
-  }
-
-  .section1__button2 {
-    text-decoration: underline 5px solid hsl(6, 99%, 69%);
+    margin: auto;
+    padding: 100px;
   }
 
   .section1__image1 {
@@ -213,9 +205,15 @@ li {
       justify-content: flex-end;
       text-align: center;
       margin: 0 auto 50px;
+
       h1,
       p {
         color: hsl(167, 40%, 24%);
+      }
+
+      p {
+        margin-top: 0;
+        width: 70%;
       }
     }
   }
@@ -241,6 +239,11 @@ li {
       p {
         color: hsl(167, 40%, 24%);
       }
+
+      p {
+        margin-top: 0;
+        width: 70%;
+      }
     }
   }
 }
@@ -252,10 +255,12 @@ li {
 .section2 {
   display: grid;
   grid-template-columns: repeat(3), 1fr;
+  padding: 90px 0;
 
   .section2__header {
     h1 {
-      margin: 80px auto;
+      font-size: 25px;
+      padding: 0 15px 40px;
       text-align: center;
       letter-spacing: 0.4em;
       color: hsl(232, 10%, 55%);
@@ -265,19 +270,24 @@ li {
   .section2__users {
     display: flex;
     text-align: center;
+    justify-content: space-evenly;
 
     .users__emily,
     .users__thomas,
     .users__jennie {
-      padding: 30px;
+      padding: 30px 50px;
     }
 
     .emily,
     .thomas,
     .jennie {
       border-radius: 50%;
-      width: 13%;
+      width: 16%;
       margin: 0 auto;
+    }
+
+    .thomas {
+      width: 14%;
     }
 
     p {
@@ -287,8 +297,7 @@ li {
 
     h2 {
       font-size: 20px;
-
-      margin: 0 auto 5px;
+      margin: 25px auto 5px;
       text-align: center;
     }
   }
@@ -300,13 +309,12 @@ li {
   display: grid;
   grid-template-columns: repeat(4, auto);
   justify-items: stretch;
-  margin-top: 100px;
 
   .milk,
   .oranges,
   .cone,
   .cubes {
-    width: 100%;
+    height: 100%;
   }
 }
 
@@ -334,9 +342,8 @@ li {
     margin: 30px 0 20px;
 
     ul {
-      padding: 0;
-      margin: 0;
       font-size: 16px;
+      padding: 0;
 
       li {
         display: inline;
@@ -427,8 +434,8 @@ li {
     .section1__text2 {
       grid-area: text;
       text-align: center;
-      height: 400px;
-      margin: 30px 0;
+      padding: 100px 40px;
+
       p {
         margin: 10px 0 20px;
       }
@@ -484,7 +491,6 @@ li {
 
       p {
         margin: 20px 0;
-        font-size: 20px;
       }
     }
   }
@@ -493,9 +499,23 @@ li {
 
   .section2 {
     justify-content: center;
+    padding: 40px 0;
+
+    .section2__header {
+      h1 {
+        font-size: 16px;
+        margin: 0 auto;
+      }
+    }
     .section2__users {
       flex-direction: column;
       justify-content: center;
+
+      .emily,
+      .thomas,
+      .jennie {
+        width: 18%;
+      }
 
       p {
         margin: 20px 0;
