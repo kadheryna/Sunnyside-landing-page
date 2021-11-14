@@ -243,6 +243,6 @@ li {
 	}
 
 	.section3 {
-		grid-template-columns: repeat(2, 2fr);
+		flex-wrap: wrap;
 	}
 }
