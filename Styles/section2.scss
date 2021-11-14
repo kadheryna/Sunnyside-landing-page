@@ -1,0 +1,53 @@
+
+/* SECTION 2 */
+
+.section2 {
+    display: grid;
+    grid-template-columns: repeat(3), 1fr;
+    padding: 90px 0;
+  
+    .section2__header {
+      h1 {
+        font-size: 25px;
+        padding: 0 15px 40px;
+        text-align: center;
+        letter-spacing: 0.4em;
+        color: hsl(232, 10%, 55%);
+      }
+    }
+  
+    .section2__users {
+      display: flex;
+      text-align: center;
+      justify-content: space-evenly;
+  
+      .users__emily,
+      .users__thomas,
+      .users__jennie {
+        padding: 30px 50px;
+      }
+  
+      .emily,
+      .thomas,
+      .jennie {
+        border-radius: 50%;
+        width: 16%;
+        margin: 0 auto;
+      }
+  
+      .thomas {
+        width: 14%;
+      }
+  
+      p {
+        margin: 35px 0 15px;
+        color: hsl(232, 10%, 55%);
+      }
+  
+      h2 {
+        font-size: 20px;
+        margin: 25px auto 5px;
+        text-align: center;
+      }
+    }
+  }

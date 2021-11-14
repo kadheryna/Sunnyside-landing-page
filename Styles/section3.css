@@ -1,0 +1,16 @@
+/* SECTION 3 */
+.section3 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[4];
+      grid-template-columns: repeat(4, auto);
+  justify-items: stretch;
+}
+
+.section3 .milk,
+.section3 .oranges,
+.section3 .cone,
+.section3 .cubes {
+  height: 100%;
+}
+/*# sourceMappingURL=section3.css.map */

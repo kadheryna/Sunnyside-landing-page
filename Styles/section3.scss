@@ -1,0 +1,17 @@
+
+
+
+/* SECTION 3 */
+
+.section3 {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-items: stretch;
+  
+    .milk,
+    .oranges,
+    .cone,
+    .cubes {
+      height: 100%;
+    }
+  }
