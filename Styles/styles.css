@@ -1,66 +1,10 @@
-* {
-  margin: 0;
-  overflow-x: hidden;
-}
-
-h1,
-h2 {
-  font-family: "Fraunces", serif;
-  color: #153c66;
-}
-
-h3 {
-  font-family: "Barlow", sans-serif;
-  color: #a7abae;
-  font-weight: 600;
-  font-size: 13px;
-  margin-top: 10px;
-}
-
-h4 {
-  font-family: "Barlow", sans-serif;
-  font-weight: 900;
-  font-size: 18px;
-  color: #458c7e;
-}
-
-p {
-  font-family: "Barlow", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #a7abae;
-  margin-bottom: 20px;
-}
-
-li {
-  font-family: "Barlow", sans-serif;
-  font-weight: 900;
-}
-
-.section1__button1,
-.section1__button2 {
-  font-family: "Fraunces", serif;
-  font-size: 14px;
-  background-color: transparent;
-  border: none;
-  -webkit-text-decoration: underline 5px solid #fad400;
-          text-decoration: underline 5px solid #fad400;
-  cursor: pointer;
-}
-
-.section1__button2 {
-  -webkit-text-decoration: underline 5px solid #fe7162;
-          text-decoration: underline 5px solid #fe7162;
-}
-
 /* HEADER */
 .header {
   background-image: url("../Images/Desktop/image-header.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 800px;
+  height: 750px;
 }
 
 .header .header__logo {
@@ -92,16 +36,21 @@ li {
   display: none;
 }
 
+.header .header__logo .hamburger__button {
+  background-color: transparent;
+  border: none;
+}
+
 .header .header__text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   padding-top: 90px;
+  text-align: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  text-align: center;
 }
 
 .header .header__text h1 {
@@ -161,6 +110,10 @@ li {
 .header .header__nav ul .nav__button:hover {
   color: white;
   background-color: #26a9d9;
+}
+
+.header .header__nav_mobile {
+  display: none;
 }
 
 /* SECTION 1 */
@@ -438,17 +391,107 @@ li {
   width: 22px;
 }
 
+* {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+h1,
+h2 {
+  font-family: "Fraunces", serif;
+  color: #153c66;
+}
+
+h3 {
+  font-family: "Barlow", sans-serif;
+  color: #a7abae;
+  font-weight: 600;
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+h4 {
+  font-family: "Barlow", sans-serif;
+  font-weight: 900;
+  font-size: 18px;
+  color: #458c7e;
+}
+
+p {
+  font-family: "Barlow", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #a7abae;
+  margin-bottom: 20px;
+}
+
+li {
+  font-family: "Barlow", sans-serif;
+  font-weight: 900;
+}
+
+.section1__button1,
+.section1__button2 {
+  font-family: "Fraunces", serif;
+  font-size: 14px;
+  background-color: transparent;
+  border: none;
+  -webkit-text-decoration: underline 5px solid #fad400;
+          text-decoration: underline 5px solid #fad400;
+  cursor: pointer;
+}
+
+.section1__button2 {
+  -webkit-text-decoration: underline 5px solid #fe7162;
+          text-decoration: underline 5px solid #fe7162;
+}
+
 /* MEDIA QUERIES FOR MOBILE */
-@media (max-device-width: 800px) {
+@media (max-device-width: 850px) {
   /* HEADER */
   .header {
-    height: 500px;
+    height: 650px;
   }
   .header .arrow {
-    top: 300px;
+    top: 400px;
   }
   .header .header__nav {
     display: none;
+  }
+  .header .header__nav_mobile {
+    display: none;
+    position: absolute;
+    background-color: white;
+    text-align: center;
+    width: 80%;
+    right: 10%;
+    top: 100px;
+  }
+  .header .header__nav_mobile ul {
+    padding: 20px;
+  }
+  .header .header__nav_mobile ul li {
+    padding: 13px 0;
+  }
+  .header .header__nav_mobile ul li a {
+    color: #23303e;
+    text-decoration: none;
+  }
+  .header .header__nav_mobile .nav_mobile__button {
+    font-family: "Fraunces", serif;
+    width: 135px;
+    height: 50px;
+    margin: 20px 0 10px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    background-color: #fad400;
+    border: none;
+    border-radius: 40px;
+  }
+  .header .show {
+    display: block;
   }
   .header .header__logo {
     margin: 20px 0 0 10px;

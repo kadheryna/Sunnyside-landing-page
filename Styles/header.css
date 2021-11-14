@@ -1,0 +1,118 @@
+/* HEADER */
+.header {
+  background-image: url("../Images/Desktop/image-header.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 750px;
+}
+
+.header .header__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.header .header__logo .logo {
+  margin-left: 40px;
+  height: 30px;
+}
+
+.header .header__logo h2 {
+  font-size: 30px;
+  color: white;
+  text-align: center;
+}
+
+.header .header__logo .hamburger {
+  display: none;
+}
+
+.header .header__logo .hamburger__button {
+  background-color: transparent;
+  border: none;
+}
+
+.header .header__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 90px;
+  text-align: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.header .header__text h1 {
+  font-size: 50px;
+  letter-spacing: 0.2em;
+  color: white;
+}
+
+.header .arrow {
+  position: absolute;
+  bottom: 300px;
+  height: 14%;
+}
+
+.header .header__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 18px;
+}
+
+.header .header__nav ul {
+  margin: 0 25px;
+  padding: 0;
+}
+
+.header .header__nav ul li {
+  display: inline;
+  padding: 0 25px 0;
+  color: white;
+  font-size: 18px;
+}
+
+.header .header__nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.header .header__nav ul .nav__button {
+  font-family: "Fraunces", serif;
+  width: 135px;
+  height: 50px;
+  margin-right: 10px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  background-color: white;
+  border: none;
+  border-radius: 40px;
+}
+
+.header .header__nav ul .nav__button:hover {
+  color: white;
+  background-color: #26a9d9;
+}
+
+.header .header__nav_mobile {
+  display: none;
+}
+/*# sourceMappingURL=header.css.map */
