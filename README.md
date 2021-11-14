@@ -8,11 +8,11 @@ Users should be able to:
 
 # Screenshots
 
-.....
+![image](https://user-images.githubusercontent.com/72280779/141697503-bda95547-b103-4db5-ae12-abf10060ee09.png)
 
 # Links
 
-- Live Site URL: (...)
+- Live Site URL: (https://kadheryna.github.io/Sunnyside-landing-page/)
 
 # Built with
 
